@@ -12,15 +12,18 @@
 
   
   <ItemGroup>
-    <AvaloniaXaml Remove="Views\Window\Download\**" />
-    <Compile Remove="Views\Window\Download\**" />
-    <EmbeddedResource Remove="Views\Window\Download\**" />
-    <None Remove="Views\Window\Download\**" />
+    <AvaloniaResource Remove="Assets\SegoeFluentIcons.ttf" />
   </ItemGroup>
 
   
   <ItemGroup>
-    <None Remove="Assets\DownloadVersionsPage.jpg" />
+    <None Remove="Assets\avalonia-logo.png" />
+    <None Remove="Assets\SegoeFluentIcons.ttf" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\SegoeFluentIcons.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,10 +33,11 @@
     <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.0.10.1" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\Pages\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
 </Project>

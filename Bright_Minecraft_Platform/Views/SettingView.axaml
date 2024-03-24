@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Bright_Minecraft_Platform.Views.SettingView">
+	<Grid>
+		<ScrollViewer>
+			<StackPanel Margin="30 10 30 30">
+				<StackPanel>
+					<TextBlock Text="游戏设置" FontSize="20" FontWeight="Bold"/>
+					<WrapPanel VerticalAlignment="Center" Margin="20 10 0 0">
+						<TextBlock Margin="0 5" Text="游戏Java" FontSize="16" FontWeight="Bold"/>
+						<ComboBox Margin="15 0 0 0" Height="10" Width="200"/>
+					</WrapPanel>
+					<WrapPanel VerticalAlignment="Center" Margin="20 10 0 0">
+						<TextBlock Margin="0 5" Text="游戏JVM" FontSize="16" FontWeight="Bold"/>
+						<TextBox Margin="15 0 0 0" Height="10" Width="200"/>
+					</WrapPanel>
+					<WrapPanel VerticalAlignment="Center" Margin="20 10 0 0">
+						<TextBlock Margin="0 5" Text="游戏内存" FontSize="16" FontWeight="Bold"/>
+						<Slider Margin="20 -10 0 0"  Width="200"/>
+					</WrapPanel>
+					<WrapPanel VerticalAlignment="Center" Margin="20 10 0 0">
+						<TextBlock Margin="0 5" Text="版本隔离" FontSize="16" FontWeight="Bold"/>
+						<WrapPanel Margin="20 0 0 0" Width="200">
+							<RadioButton Content="开启"/>
+							<RadioButton Margin="20 0 0 0" Content="关闭"/>
+						</WrapPanel>
+					</WrapPanel>
+				</StackPanel>
+				<StackPanel Margin="0 30 0 0">
+					<TextBlock Text="界面设置" FontSize="20" FontWeight="Bold"/>
+					<WrapPanel VerticalAlignment="Center" Margin="20 10 0 0">
+						<TextBlock Margin="0 5" Text="主题" FontSize="16" FontWeight="Bold"/>
+						<ComboBox Margin="15 0 0 0" Height="10" Width="200">
+							<ComboBoxItem Content="亮色风 Light"/>
+							<ComboBoxItem Content="暗色风 Dark"/>
+						</ComboBox>
+					</WrapPanel>
+				</StackPanel>
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

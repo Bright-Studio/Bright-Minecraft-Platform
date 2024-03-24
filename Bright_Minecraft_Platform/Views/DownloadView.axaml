@@ -3,14 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Bright.Views.LaunchPages.LaunchPage">
-	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition/>
-			<RowDefinition Height="80"/>
-		</Grid.RowDefinitions>
-		<Border BoxShadow="0 2 20 0 #66000000" Background="#DBDBDB" Grid.Row="1">
-
-		</Border>
-	</Grid>
+			 Background="Red"
+             x:Class="Bright_Minecraft_Platform.Views.DownloadView">
+  Welcome to Avalonia!
 </UserControl>

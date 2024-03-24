@@ -1,0 +1,108 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Bright_Minecraft_Platform.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Width="1000" Height="550"
+        x:Class="Bright_Minecraft_Platform.Views.MainWindow"
+		Background="#1D1D1D"
+		ExtendClientAreaToDecorationsHint="True"
+		ExtendClientAreaChromeHints="Default"
+		xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+        xmlns:ia="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
+        Title="{Binding title}">
+	<Window.Resources>
+		<FontFamily x:Key="FontIcon">resm:Bright_Minecraft_Platform.Assets.SegoeFluentIcons.ttf?assembly=:Bright_Minecraft_Platform#Segoe Fluent Icons</FontFamily>
+	</Window.Resources>
+	
+	<SplitView IsPaneOpen="True"
+			   DisplayMode="Inline"
+			   OpenPaneLength="60"
+			   x:Name="Navigation">
+		<SplitView.Pane>
+			<StackPanel Margin="0 20 0 20">
+				<Border Height="35" Width="35" CornerRadius="114514">
+					<Border.Background>
+						<ImageBrush Stretch="UniformToFill" Source="/Assets/avalonia-logo.png"/>
+					</Border.Background>
+				</Border>
+				
+				<!--<TextBlock Text="BMP" VerticalAlignment="Center" HorizontalAlignment="Center"/>-->
+				<ListBox SelectedItem="{Binding Current}" Margin="0 20 0 40" Background="#161616">
+					<ListBox.ItemsPanel>
+						<ItemsPanelTemplate>
+							<!--调整元素之间的间距-->
+							<StackPanel Spacing="8"/>
+						</ItemsPanelTemplate>
+					</ListBox.ItemsPanel>
+					<ListBox.Styles>
+						<Style Selector="ListBoxItem">
+							<Setter Property="Width" Value="40"/>
+							<Setter Property="Height" Value="40"/>
+							<Setter Property="CornerRadius" Value="8"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+							<Setter Property="HorizontalAlignment" Value="Center"/>
+							<Setter Property="VerticalContentAlignment" Value="Center"/>
+							<Setter Property="HorizontalContentAlignment" Value="Center"/>
+							
+							<!--重新定义ListBoxItem的样式模板-->
+							<Setter Property="Template">
+								<ControlTemplate>
+									<ContentPresenter Name="PART_ContentLayout"
+													  Background="{TemplateBinding Background}"
+				                                      BorderBrush="{TemplateBinding BorderBrush}"
+				                                      BorderThickness="{TemplateBinding BorderThickness}"
+				                                      CornerRadius="{TemplateBinding CornerRadius}"
+				                                      ContentTemplate="{TemplateBinding ContentTemplate}"
+				                                      Content="{TemplateBinding Content}"
+				                                      Padding="{TemplateBinding Padding}"
+				                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+				                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" ></ContentPresenter>
+								</ControlTemplate>
+							</Setter>
+						</Style>
+						
+						<!--定义其他状态下要执行的东西--> 
+						<!--鼠标上移-->
+						<Style Selector="ListBoxItem:pointerover">
+							<Setter Property="Background" Value="{DynamicResource SystemControlHighlightListLowBrush}"/>
+						</Style>
+						
+						<!--被选中-->
+						<Style Selector="ListBoxItem:selected">
+							<Setter Property="Background" Value="#282828"/>
+						</Style>
+					</ListBox.Styles>
+					<ListBoxItem FontFamily="{StaticResource FontIcon}"
+								 HorizontalContentAlignment="Center"
+								 Content="&#xE80F;"
+								 Tag="Home">
+					</ListBoxItem>
+					<ListBoxItem Tag="Download" FontFamily="{StaticResource FontIcon}" 
+								 HorizontalContentAlignment="Center"
+								 Content="&#xE896;"/>
+					<ListBoxItem FontFamily="{StaticResource FontIcon}"
+								 HorizontalContentAlignment="Center"
+								 Content="&#xE703;"/>
+					<ListBoxItem FontFamily="{StaticResource FontIcon}"
+								 HorizontalContentAlignment="Center"
+								 Content="&#xE912;"/>
+					<ListBoxItem FontFamily="{StaticResource FontIcon}"
+								 HorizontalContentAlignment="Center"
+								 Content="&#xE71D;"/>
+					<ListBoxItem FontFamily="{StaticResource FontIcon}"
+								 HorizontalContentAlignment="Center"
+								 Content="&#xE713;"
+								 Tag="Setting"/>					
+				</ListBox>
+			</StackPanel>
+		</SplitView.Pane>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="30"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<ContentControl Grid.Row="1" x:Name="Frame" Content="{Binding Page}"/>
+		</Grid>
+	</SplitView>
+</Window>

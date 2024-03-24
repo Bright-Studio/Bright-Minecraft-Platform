@@ -3,7 +3,7 @@
 using Avalonia;
 using Avalonia.ReactiveUI;
 
-namespace Bright.Desktop;
+namespace Bright_Minecraft_Platform.Desktop;
 
 class Program
 {
