@@ -13,11 +13,13 @@ namespace Bright_Minecraft_Platform.ViewModels
 {
     internal partial class MainWindowViewModel : ObservableObject
     {
+
         [ObservableProperty]
-        private object _page = new HomeView();
+        public object _page = new HomeView();
 
         [ObservableProperty]
         private object _current;
+        
 
         //[RelayCommand]
         //private void ToDownloadPage()
@@ -36,7 +38,8 @@ namespace Bright_Minecraft_Platform.ViewModels
             {
                 "Home" => new HomeView(),
                 "Download" => new DownloadView(),
-                "Setting" => new SettingView(),
+                "Setting" => new SettingView(),//Playground
+                "Playground" => new ServerListView(),//Playground
                 _ => new HomeView(),
             };
         }

@@ -10,9 +10,9 @@
 			<RowDefinition Height="70"/>
 		</Grid.RowDefinitions>
 		<WrapPanel Grid.Row="1" Margin="10 0  10 0" VerticalAlignment="Center" HorizontalAlignment="Right">
-			<Button Margin="0 0 10 0" Content="账户 Novoline+" Width="150" Height="50" CornerRadius="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+			<Button Margin="0 0 10 0" Content="{Binding Selectedaccount}" Width="150" Height="50" CornerRadius="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 			<ComboBox Width="150" Height="50" Margin="0 0 10 0" CornerRadius="6"/>
-			<Button Content="启动游戏" Width="150" Height="50" CornerRadius="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+			<Button Content="{Binding Launchgame}" Width="150" Height="50" CornerRadius="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 		</WrapPanel>
 	</Grid>
 </UserControl>

@@ -1,0 +1,42 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Bright_Minecraft_Platform.ServerListView">
+	<StackPanel Margin="20 20 20 20">
+		<ListBox x:Name="ServerList"
+			HorizontalAlignment="Stretch"
+			ItemsSource="{Binding}"
+			VerticalAlignment="Stretch">
+			<ListBox.Template>
+				<ControlTemplate>
+					<Grid>
+						<Border CornerRadius="10" Height="100" Background="#161616">
+							<Grid Margin="15 15 15 15">
+								<WrapPanel HorizontalAlignment="Right">
+									<StackPanel>
+										<TextBlock HorizontalAlignment="Right" Text="{Binding ServerVersions}" FontSize="18"/>
+									</StackPanel>
+								</WrapPanel>
+								<WrapPanel>
+									<Button Width="80" Height="80" CornerRadius="10">
+										<Button.Template>
+											<ControlTemplate>
+												<Image Stretch="Uniform" Source="/Assets/LOGOICON.ico"/>
+											</ControlTemplate>
+										</Button.Template>
+									</Button>
+									<StackPanel Margin="10 9 0 0">
+										<TextBlock Text="{Binding ServerName}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="23" FontWeight="Bold"/>
+										<TextBlock Text="{Binding ServerSynopsis}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="17"/>
+									</StackPanel>
+								</WrapPanel>
+							</Grid>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</ListBox.Template>
+		</ListBox>
+	</StackPanel>
+</UserControl>

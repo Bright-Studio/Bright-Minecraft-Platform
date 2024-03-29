@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bright_Minecraft_Platform",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bright_Minecraft_Platform.Desktop", "..\Bright_Minecraft_Platform.Desktop\Bright_Minecraft_Platform.Desktop.csproj", "{81420B3C-4CF0-4BC8-BDBB-7875F81671BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrightAPI", "..\BrightAPI\BrightAPI.csproj", "{5312ADF4-985A-40DB-B0C4-710BB3A31939}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{81420B3C-4CF0-4BC8-BDBB-7875F81671BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81420B3C-4CF0-4BC8-BDBB-7875F81671BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81420B3C-4CF0-4BC8-BDBB-7875F81671BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5312ADF4-985A-40DB-B0C4-710BB3A31939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5312ADF4-985A-40DB-B0C4-710BB3A31939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5312ADF4-985A-40DB-B0C4-710BB3A31939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5312ADF4-985A-40DB-B0C4-710BB3A31939}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

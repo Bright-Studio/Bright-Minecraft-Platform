@@ -6,6 +6,7 @@
         mc:Ignorable="d" Width="1000" Height="550"
         x:Class="Bright_Minecraft_Platform.Views.MainWindow"
 		Background="#1D1D1D"
+		Icon="/Assets/LOGOICON.ico"
 		ExtendClientAreaToDecorationsHint="True"
 		ExtendClientAreaChromeHints="Default"
 		xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
@@ -86,7 +87,8 @@
 								 Content="&#xE703;"/>
 					<ListBoxItem FontFamily="{StaticResource FontIcon}"
 								 HorizontalContentAlignment="Center"
-								 Content="&#xE912;"/>
+								 Content="&#xE81E;"
+								 Tag="Playground"/>
 					<ListBoxItem FontFamily="{StaticResource FontIcon}"
 								 HorizontalContentAlignment="Center"
 								 Content="&#xE71D;"/>

@@ -3,6 +3,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+    <ApplicationIcon>Assets\LOGOICON.ico</ApplicationIcon>
   </PropertyGroup>
 
   
@@ -23,6 +24,11 @@
 
   
   <ItemGroup>
+    <Content Include="Assets\LOGOICON.ico" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
     <EmbeddedResource Include="Assets\SegoeFluentIcons.ttf" />
   </ItemGroup>
 
@@ -35,6 +41,7 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.0.10.1" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>

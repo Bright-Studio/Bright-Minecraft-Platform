@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Bright_Minecraft_Platform.Views.PlaygroundView">
+	<Grid ShowGridLines="True">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="350"/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Border VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#161616" Margin="20 20 20 20" CornerRadius="10">
+			<ScrollViewer>
+				<StackPanel Margin="20 20 20 20">
+					<TextBlock Text="导航板块" FontSize="20"/>
+					<Button Height="100" HorizontalAlignment="Stretch" Margin="0 20 0 0" CornerRadius="10" Background="#2A2929" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="模组资源" FontSize="17"/>
+					<Button Height="100" HorizontalAlignment="Stretch" Margin="0 20 0 0" CornerRadius="10" Background="#2A2929" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="整合包资源" FontSize="17"/>
+					<Button Height="100" HorizontalAlignment="Stretch" Margin="0 20 0 0" CornerRadius="10" Background="#2A2929" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="服务器资源" FontSize="17"/>
+					<Button Height="100" HorizontalAlignment="Stretch" Margin="0 20 0 0" CornerRadius="10" Background="#2A2929" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="插件资源" FontSize="17"/>
+					<Button Height="100" HorizontalAlignment="Stretch" Margin="0 20 0 0" CornerRadius="10" Background="#2A2929" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="辅助资源" FontSize="17"/>
+				</StackPanel>
+			</ScrollViewer>
+		</Border>
+	</Grid>
+</UserControl>

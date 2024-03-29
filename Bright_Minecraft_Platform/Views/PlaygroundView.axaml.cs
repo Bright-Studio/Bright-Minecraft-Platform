@@ -3,12 +3,12 @@ using Bright_Minecraft_Platform.ViewModels;
 
 namespace Bright_Minecraft_Platform.Views
 {
-    public partial class HomeView : UserControl
+    public partial class PlaygroundView : UserControl
     {
-        public HomeView()
+        public PlaygroundView()
         {
             InitializeComponent();
-            DataContext = new HomeViewModel();
+            DataContext = new PlaygroundViewModel();
         }
     }
 }
